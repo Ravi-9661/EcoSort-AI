@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSort AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">♻️ EcoSort <span>AI</span></div>
+  <p>Smart Waste Classification & Sustainability Assistant</p>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <span class="badge">1M1B • AI for Sustainability</span>
+      <h1>Turn waste into the right action.</h1>
+      <p>Enter a waste item and EcoSort AI predicts its category, disposal method and sustainability impact.</p>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card input-card">
+      <h2>🔎 Classify Waste</h2>
+      <label for="item">Waste item</label>
+      <input id="item" placeholder="e.g. plastic bottle, banana peel, old phone">
+      <button onclick="classifyWaste()">Analyze with AI</button>
+      <div id="result" class="result hidden"></div>
+    </div>
+
+    <div class="card">
+      <h2>📊 Sustainability Dashboard</h2>
+      <div class="stats">
+        <div><strong id="total">0</strong><span>Items analyzed</span></div>
+        <div><strong id="recyclable">0%</strong><span>Recyclable rate</span></div>
+        <div><strong id="impact">0</strong><span>Eco points</span></div>
+      </div>
+      <div class="bar"><div id="barFill"></div></div>
+      <p class="muted">Eco points are an educational estimate based on the predicted waste category.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🌍 Sustainable Development Goals</h2>
+    <div class="sdgs">
+      <div><b>SDG 11</b><span>Sustainable Cities & Communities</span></div>
+      <div><b>SDG 12</b><span>Responsible Consumption & Production</span></div>
+      <div><b>SDG 13</b><span>Climate Action</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🧠 How the AI Logic Works</h2>
+    <ol>
+      <li>Normalize the user's waste description.</li>
+      <li>Match sustainability keywords against a lightweight rule-based knowledge model.</li>
+      <li>Predict a category and confidence score.</li>
+      <li>Return a disposal recommendation and estimated eco points.</li>
+    </ol>
+    <p class="muted">This demo intentionally uses transparent local AI logic so it works without API keys. It can later be connected to an LLM such as IBM Granite.</p>
+  </section>
+</main>
+
+<footer>Built for AI for Sustainability • Educational prototype</footer>
+<script src="app.js"></script>
+</body>
+</html>
